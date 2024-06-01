@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <!-- Include Tailwind CSS -->
+    <link href="css/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased bg-gray-100 w-full">
+  <div class="w-full px-5 sm:px-0 sm:w-[60%] sm:mx-auto py-2">
+    <form  id="multi-step-form" class="w-full shadow-lg rounded-3xl border-2 border-blue-500 justify-center h-screen">
+      <div id="personal" class="flex justify-center h-screen">
+        <!-- Personal Identification Details -->
+        <div class="px-auto m-0 p-0">
+            <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 mt-10">Tell us about yourself</h4>
+            <div class="flex relative items-center my-12 px-4">
+                <div class="bg-white rounded-full p-2 mr-4 mt-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 py-2 mt-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">What's your name?</h4>
+            </div>
+            <div class="fixed bottom-5 left-0 w-full flex flex-row gap-0 items-center justify-center">
+              <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+                <div class="relative flex items-center ">
+                    <input type="text" id="FullName" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="Enter Full Name" />
+                </div>
+                <button id="next-step-personal" class="ml-2 w-fit-content px-0 text-sm font-semibold rounded text-white focus:outline-none">
+                    <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5" />
+                        </svg>
+                    </div>
+                </button>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+    
+    <div id="contact" class="hidden flex justify-center h-screen">
+      <!-- Email Details -->
+          <div class="px-auto m-0 p-0 ">
+              <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+              <div class="flex relative items-center my-12 px-4">
+                <div class="bg-white rounded-full p-2 mr-4 mt-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                  <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">How do we contact you through email?</h4>
+              </div>
+              <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+                 <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+                  <button id="prev-step-contact" class="hidden w-12 focus:outline-none">
+                    <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                        </svg>
+                    </div>
+                  </button>
+                  <div class="relative flex items-center">
+                      <input type="email" id="email" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="Enter email"/>
+                  </div>
+                  <button id="next-step-contact" class="ml-2 w-fit-content py-3 px-0 text-sm font-semibold rounded text-white focus:outline-none">
+                      <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                          <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                          </svg>
+                      </div>
+                  </button>
+                </div>
+              </div>
+          </div>
+    </div>
+
+    <div id="contact" class="hidden flex justify-center h-screen">
+        <!-- Contact Details -->
+            <div class="px-auto m-0 p-0 ">
+                <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+                <div class="flex relative items-center my-12 px-4">
+                  <div class="bg-white rounded-full p-2 mr-4 mt-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                    <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">On behalf of clients, how do we contact you via phone?</h4>
+                </div>
+                <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+                   <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+                        <button id="prev-step-contact" class="hidden w-12 focus:outline-none">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                            </svg>
+                        </div>
+                        </button>
+                        <div class="relative flex items-center">
+                            <input name="phone" type="tel" id="phone" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="Enter phone number" autocomplete="off"/>
+                        </div>
+                        <button id="next-step-contact" class="ml-2 w-fit-content py-3 px-0 text-sm font-semibold rounded text-white focus:outline-none">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                                </svg>
+                            </div>
+                        </button>
+                  </div>
+                </div>
+            </div>
+      </div>
+  
+  
+  <div id="residency" class="hidden flex justify-center h-screen">
+    <!-- Residency Details -->
+    <div class="px-auto m-0 p-0">
+        <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+        <div class="flex relative items-center my-12 px-4">
+            <div class="bg-white rounded-full p-2 mr-4 mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">Where are you based?</h4>
+        </div>
+
+        <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+            <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+              <button id="prev-step" class="hidden w-12 focus:outline-none">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                    </svg>
+                </div>
+              </button>
+              <div class="relative flex items-center">
+                  <input name="input" type="input" id="country" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="Country, City" autocomplete="off"/>
+              </div>
+              <button id="next-step" class="ml-2 w-fit-content px-0 text-sm font-semibold rounded text-white focus:outline-none">
+                  <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                      <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                      </svg>
+                  </div>
+              </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+<div id="expertise" class="hidden flex justify-center h-screen">
+  <!-- Expertise Details -->
+  <div class="px-auto m-0 p-0">
+      <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+      <div class="flex relative items-center my-12 px-4">
+        <div class="bg-white rounded-full p-2 mr-4 mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+          <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">What's your area of expertise?</h4>
+      </div>
+
+      <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+        <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+            <button id="prev-step" class="hidden w-12 focus:outline-none">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="relative flex items-center">
+                <input name="expertise" type="text" id="ExpertiseArea" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="E.g Health " autocomplete="off"/>
+            </div>
+            <button id="next-step" class="ml-2 w-fit-content py-3 px-0 text-sm font-semibold rounded text-white focus:outline-none">
+                <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                    </svg>
+                </div>
+            </button>
+        </div>
+      </div>   
+  </div>
+</div>
+
+  
+<div id="duration" class="hidden flex justify-center h-screen">
+  <!-- Duration Details -->
+  <div class="px-auto m-0 p-0">
+      <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+      <div class="flex relative items-center my-12 px-4">
+        <div class="bg-white rounded-full p-2 mr-4 mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+          <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">How long have you been practicing?</h4>
+      </div>
+
+      <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+        <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+          <button id="prev-step" class="hidden w-12 focus:outline-none">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                </svg>
+            </div>
+          </button>
+          <div class="relative flex items-center justify-center">
+              <input name="duration" type="text" id="PractiseDuration" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="E.g 2 years " autocomplete="off"/>
+          </div>
+          <button id="next-step" class="ml-2 w-fit-content py-3 px-0 text-sm font-semibold rounded text-white focus:outline-none">
+              <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                  </svg>
+              </div>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
+
+  
+<div id="description" class="hidden flex justify-center h-screen">
+  <!-- Description Details -->
+  <div class="px-auto m-0 p-0">
+      <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+      <div class="flex relative items-center my-12 px-4">
+        <div class="bg-white rounded-full p-2 mr-4 mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+          <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">Briefly describe your work or practice.</h4>
+      </div>
+      <div class="fixed bottom-5 left-0 w-full flex flex-row gap-5 items-center justify-center px-auto">
+        <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center">
+          <button id="prev-step" class="hidden w-12 focus:outline-none">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                </svg>
+            </div>
+          </button>
+          <div class="relative flex items-center">
+            <input name="description" type="text" id="workDescription" class="bg-white border border-gray-300 sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="NB: 10 to 100 words max " autocomplete="off"/>
+          </div>
+          <button id="next-step" class="ml-2 w-fit-content py-3 px-0 text-sm font-semibold rounded text-white focus:outline-none">
+              <div class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-800 rounded-full">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white transform rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                  </svg>
+              </div>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div id="title" class="hidden flex justify-center h-screen">
+  <!-- Title Details -->
+  <div class="px-auto m-0 p-0">
+      <h4 class="text-3xl sm:text-5xl font-semibold text-blue-500 flex items-center justify-center py-10 m-0 mt-10">Tell us about yourself</h4>
+      <div class="flex relative items-center my-12 px-4">
+        <div class="bg-white rounded-full p-2 mr-4 mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+          <h4 class="text-xl sm:text-4xl text-white flex items-center justify-center px-4 mt-2 py-2 w-full bg-blue-500 rounded-tl-xl rounded-br-xl">Which one suits you best?</h4>
+          
+      </div>
+      <span class=" flex ml-10">
+        <ul name="title" id="BizTitle" class="list-disc text-xl px-4 py-2.5 text-gray-700">
+            <li value="Consultant">Consultant</li>
+            <li value="Expert">Expert</li>
+            <li value="specialist">Specialist</li>
+            <li value="professional">professional</li>
+            <li value="researchers">Researcher</li>
+            <li value="Health">Skilled Individual</li>
+        </ul>
+      </span>
+    <div class="fixed bottom-5 left-0 w-full flex flex-row items-center justify-center px-auto ">
+        <div class="flex gap-1 sm:gap-3 w-[90%] sm:w-full mx-auto sm:mx-0 p-2 items-center justify-center ">
+            <button id="prev-step" class="hidden w-12 focus:outline-none">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white transform -rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="relative flex items-center ">
+                <input name="qualification" type="input" id="qualification" class="bg-white border border-gray-300 w-full sm:w-96 rounded-3xl text-sm px-4 py-2.5 outline-blue-500" placeholder="Enter one option only" autocomplete="off"/>
+            </div>
+            <button id="submit-btn" class="ml-0 cursor-pointer hidden w-fit-content py-2 px-4 text-sm font-semibold rounded-3xl text-white bg-green-700 hover:bg-green-800 hover:text-gray-100 focus:outline-none">Submit</button>
+        </div>
+    </div>
+    </div>
+    </form>
+</div>
+</div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuItems = document.getElementById('menu-items');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', function () {
+            menuItems.classList.toggle('hidden');
+            menuItems.classList.toggle('slide-in');
+        });
+
+        closeMenu.addEventListener('click', function () {
+            menuItems.classList.add('hidden');
+            menuItems.classList.remove('slide-in');
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('multi-step-form');
+    const sections = form.querySelectorAll('div[id]');
+    const prevButtons = form.querySelectorAll('[id^="prev-step"]');
+    const nextButtons = form.querySelectorAll('[id^="next-step"]');
+    const submitButton = document.getElementById('submit-btn');
+
+    let currentStep = 0;
+
+    // Function to show the current step and hide the rest
+    function showStep(stepIndex) {
+        sections.forEach((section, index) => {
+            if (index === stepIndex) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+
+        if (stepIndex === 0) {
+            prevButtons.forEach(button => button.classList.add('hidden'));
+        } else {
+            prevButtons.forEach(button => button.classList.remove('hidden'));
+        }
+
+        if (stepIndex === sections.length - 1) {
+            nextButtons.forEach(button => button.classList.add('hidden'));
+            submitButton.classList.remove('hidden');
+        } else {
+            nextButtons.forEach(button => button.classList.remove('hidden'));
+            submitButton.classList.add('hidden');
+        }
+    }
+
+    // Show the initial step
+    showStep(currentStep);
+
+    // Function to handle next button click
+    function handleNextButtonClick() {
+        currentStep++;
+        showStep(currentStep);
+    }
+
+    // Function to handle previous button click
+    function handlePrevButtonClick() {
+        currentStep--;
+        showStep(currentStep);
+    }
+
+    // Add event listeners to next buttons
+    nextButtons.forEach(button => {
+        button.addEventListener('click', handleNextButtonClick);
+    });
+
+    // Add event listeners to previous buttons
+    prevButtons.forEach(button => {
+        button.addEventListener('click', handlePrevButtonClick);
+    });
+});
+
+
+$(document).ready(function(){
+
+  $("#multi-step-form").submit(function(event) {
+  event.preventDefault();
+});
+ 
+  $("#submit-btn").click(function(){
+      let familyName = $("#FamilyName").val();
+      let otherName = $("#OtherName").val();
+      let email = $("#email").val();
+      let phone = $("#phone").val();
+      let country = $("#country").val();
+      let city = $("#city").val();
+      let Expertise = $("#ExpertiseArea").val();
+      let practise = $("#PractiseDuration").val();
+      let duration = $("#PractiseDescription").val();
+      let qualification = $("#qualification").val();
+      let title = $("#BizTitle").val();
+      $.ajax({
+        method: 'POST',
+        url: 'https://formsubmit.co/brightsumpuo@gmail.com',
+        dataType: 'json',
+        accepts: 'application/json',
+        data: {
+            familyName: familyName,
+            otherName: otherName,
+            email: email,
+            phone: phone,
+            country: country,
+            city: city,
+            Expertise: PractiseArea,
+            practise: PracticeDuration,
+            duration: PractiseDescription,
+            qualification: qualification,
+            title: BizTitle
+        },
+        success: function(data){
+          alert("Data sent successfully");
+          console.log(data);
+        },
+        error: (err) => console.log(err)
+    });
+
+  });
+});
+</script>
+
+
+
+</html>
